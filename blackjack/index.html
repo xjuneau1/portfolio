@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">  
+    </head>
+    <body>
+        <h1>Welcome to Blackjack.</h1>
+        <p class="instructions">Instructions: The goal of the game is to get 21 "points". Press the 
+            "START NEW GAME" button, then click the "NEW CARD" button if you want the dealer to deal 
+            you a new card. If you go over 21, you lose and must start a new game. Once you get to 21, 
+            you win. Congratulations, you don't get anything. Good luck!
+        </p>
+        
+        <p id="message-el" class="message-el">Want to play a game?</p>
+        <h2 id="cards-el">Cards:</h2>
+        <h2 id="sum-el">Sum:</h2>
+            <button class="btn" onclick="startGame()">START NEW GAME</button>
+            <button class="btn" onclick="newCard()">NEW CARD</button>
+        <script src="index.js"></script>
+    </body>
+</html>

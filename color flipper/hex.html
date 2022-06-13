@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Color Changer || Hex</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-center">
+            <h4>color changer</h4>
+            <ul class="nav-links">
+                <h3>Type in a color, rgba, or Hex value : </h3>
+                <li class="input-container">
+                    <input type="text" class="input" id="input"><button class="nav-btn" id="nav-btn">Submit</button>
+                </li>
+                <li>
+                    <a href="index.html">simple</a>
+                </li>
+                <li>
+                    <a href="hex.html">hex</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="list-pane">
+        <div class="list">
+            <h5>Click for a list of colors and Hex codes</h2>
+            <button class="list-btn" id="open">Click Here</button>
+        </div>
+        <div class="list-container" id="list-container">
+            <div class="list-content">
+                <div class="list-title">Available colors:</div>
+                <ul class="list-format"  id="list-colors">
+
+                </ul>
+                <div class="list-title">Hexadecimal Values:</div>
+                <ul class="list-format"  id="list-hex">
+
+                </ul>
+                <button class="close-btn" id="close">Close</button>
+                <button class="close-btn" id="refresh">Refresh</button>
+            </div>
+        </div>
+    </div>
+    <main>
+        
+        <div class="container">
+            <h2>background color : <span class="color">#f1f5f8</span>
+            </h2>
+            <button class="btn btn-hero" id="btn">click me</button>
+        </div>
+    </main>
+    <script src="hex.js"></script>
+</body>
+</html>

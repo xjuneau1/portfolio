@@ -1,0 +1,346 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+    background-image: url(images/background_blur.jpg);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Start of Main Header style */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(20, 20, 20, 0.3);
+}
+
+.main-header > h1 {
+    display: inherit;
+    text-align: center;
+    justify-content: center;
+    font-size: 3em;
+    font-family: inherit;
+    font-weight: 600;
+    color: azure;
+}
+/* Styles for Navbar */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    border-bottom: 1px solid white;
+}
+.nav-container ul {
+    display: flex;
+    align-items: center;
+}
+.nav-container ul > li {
+    border-radius: 5px;
+    margin: 0 .5em 0 .5em;
+    list-style: none;
+    transition: 300ms;
+}
+.nav-container > ul>li:hover {
+    transition: 300ms;
+    background-color:rgba(80, 80, 80, 0.7) 
+}
+
+.nav-container ul > li > a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.25em;
+    text-align: center;
+    margin: 0 .5em 0 .5em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/*Styles for About Section */
+.about {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+.about-text {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 600px;
+    margin: auto;
+    color: white;
+}
+
+.about-text button {
+    
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px;
+    margin:auto;
+    width: fit-content;
+    background-color: rgb(75, 180, 255);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+}
+
+.about-text button:hover {
+    background-color: rgb(60, 150, 255);
+    cursor: pointer;
+}
+
+.about-text button:active {
+    transform: translateY(10%);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.5);
+}
+.about-description {
+    font-size: 1.25em;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-align: center;
+    background-color: rgba(85, 85, 85, 0.507);
+}
+.about > h1 {
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    position: relative;
+    margin-bottom: 25px;
+    background-color: rgba(85, 85, 85, 0.507);
+    border-radius: 5px;
+    padding: 2px 10px 0px 10px;
+    
+}
+
+.about h2 {
+    font-size: 1em;
+    font-weight: 100;
+    margin: 0;
+}
+
+.about > p {
+    flex-direction: column;
+    width: fit-content;
+    text-align: center;
+    padding: 20px;
+}
+
+/*Styles for the JS code in the About section*/
+.indent-1 {
+    font-size: 1em;
+    text-indent: 2em;
+    font-weight: 100;
+}
+
+.indent-2 {
+    font-size: 1em;
+    text-indent: 4em;
+    font-weight: 100;
+}
+
+.code-text {
+    border-top: 2px solid white;
+    background-color: rgba(85, 85, 85, 0.5);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin: none;
+}
+
+/* Start of Profile Picture style */
+.picture-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5em;
+}
+
+.picture{
+    flex-wrap: wrap;
+    height: auto;
+    width: fit-content;
+    max-width: 50%;
+    margin:0;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 20px 20px rgba(rgb(80, 80, 80), rgb(80, 80, 80), rgb(80, 80, 80), .3);
+}
+
+/*Styling the contact modal*/
+.contact-container {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    height: auto;
+    max-width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+.contact-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.btn-contact {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px;
+    width: fit-content;
+    background-color: rgb(75, 180, 255);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+}
+
+.contact {
+    border-radius: 5px;
+    color:black;
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    max-width: 100%;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+}
+.contact h1 {
+    font-size: 1.7em;
+    background-color: rgba(75, 180, 255, .4);
+    margin: 0;
+    padding-left: 5px;
+    border-radius: none;
+}
+.contact p {
+    font-size: .9em;
+    margin:5px;
+    opacity: 0.9;
+}
+.contact a {
+    color:black;
+    text-decoration: 1px solid underline;
+}
+
+/*Styling for Section tags*/
+.content-section {
+    border: 1px solid white;
+    flex-direction: column;
+    width: auto;
+    display: flex;
+    color: white;
+    text-align: left;
+    margin: 10px;
+    padding: 20px;
+}
+
+.content-section h1 {
+    font-size: 1.25em;
+    display: flex;
+    position: relative;
+}
+
+/* Styles for Project Page*/
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+}
+.project-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 2em;
+    margin: auto;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.project-container h2 {
+    color: white;
+    font-size: 1.25em;
+}
+.project-container h3 {
+    display: flex;
+    color: white;
+    font-size: 1em;
+}
+.project-container > ul {
+    padding: 0;
+}
+.project-container ul>li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+    background-color: rgba(85, 85, 85, 0.507);
+    text-decoration: none;
+}
+
+.project-element {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.project-icon > img {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+    border-radius: 3px;
+}
+
+.project-description {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.project-description > a {
+    text-decoration: underline;
+    text-indent: 2em;
+    transition: 400ms;
+}
+.project-description > a:hover {
+    color: rgb(100, 255, 255);
+}
+.project-description > p {
+    font-size: 1.25em;
+    font-size: 1em;
+    color: white;
+}
+
+.more-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.more-about-header {
+    font-size: 2em;
+    margin-top: 50px;
+    border: 2px solid white;
+    height: 40px;
+    width: 100vw;
+    color: white;
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+.more-about-body {
+    color: white;
+    border: 2px solid white;
+}
